@@ -29,7 +29,7 @@ recognizer.onresult = event => {
             var comando = results[i][0].transcript.split(" ");
             // PROCURA A PALAVRA DITA NA LISTA DE FUNÇÕESE EXECUTA
             for (i in funcs)
-                if (i.toLowerCase() === comando[0].toLowerCase())
+                if (i.toLowerCase() == comando[0].toLowerCase())
                     funcs[i](comando.splice(1, comando.length));
 
         } else {
